@@ -1,10 +1,20 @@
+
 import './App.css';
+import { Routes, Route } from 'react-router-dom';
+import Navbar from './component/Navbar';
+import Dashboard from './component/Dashboard';
+import About from './component/About';
 
 function App() {
   return (
-   <>
-   <h1>my name is himesh bhattarai</h1>
-   </>
+    <>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Dashboard />} />
+        <Route path="/Dashboard" element={<Dashboard />} />
+        <Route path="/about" element={<About />} />
+      </Routes>
+    </>
   );
 }
 
