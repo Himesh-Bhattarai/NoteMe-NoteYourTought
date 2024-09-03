@@ -1,9 +1,13 @@
 import React from 'react'
+import AddNotes from './AddNotes'
 
 export default function Dashboard() {
   return (
     <div>
-      Hello i am himesh
+      Addyour notes
+      <div className="notes">
+        <AddNotes />
+      </div>
     </div>
   )
 }
