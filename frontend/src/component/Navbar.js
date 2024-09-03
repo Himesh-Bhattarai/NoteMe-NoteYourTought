@@ -23,6 +23,9 @@ console.log(activeLocation.pathname);
                 <Link className={`nav-link ${activeLocation.pathname === "/Dashboard"? "active":"" }`} aria-current="page" to="/Dashboard">Home</Link>
               </li>
               <li className="nav-item">
+                <Link className={`nav-link ${activeLocation.pathname === "/Notes"? "active":"" }`} aria-current="page" to="/Notes">Notes</Link>
+              </li>
+              <li className="nav-item">
                 <Link className={`nav-link ${activeLocation.pathname === "/About"? "active":"" }`} to="/About">About</Link>
               </li>
               <li className="nav-item">

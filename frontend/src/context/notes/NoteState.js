@@ -6,6 +6,18 @@ const NoteState = (props) => {
         "Name": "Himesh",
         "Age": "19"
     }
+
+
+    //Add note
+const addNote =()=>{
+    
+}
+    //Editnote
+
+
+    //Deletenotes
+
+
     return (
         <NoteContext.Provider value={state}>
             {props.clildern}
