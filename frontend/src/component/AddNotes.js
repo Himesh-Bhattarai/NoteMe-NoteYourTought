@@ -9,11 +9,13 @@ const AddNotes = () => {
 
     const handleClick = (e) => {
         e.preventDefault(); 
-        addNote(note.title, note.description);
+        addNote(note.title, note.description); 
+
+        setNote({ title: "", description: "" });
     };
 
     const onChange = (e) => {
-        setNote({ ...note, [e.target.name]: e.target.value }); 
+        setNote({ ...note, [e.target.name]: e.target.value });
     };
 
     return (
@@ -21,12 +23,25 @@ const AddNotes = () => {
             <form>
                 <div className="mb-3">
                     <label htmlFor="title" className="form-label">Title</label>
-                    <input type="text" id="title" className="form-control" name="title" value={note.title} onChange={onChange}/>
+                    <input 
+                        type="text" 
+                        id="title" 
+                        className="form-control" 
+                        name="title" 
+                        value={note.title} 
+                        onChange={onChange} 
+                    />
                 </div>
                 <div className="mb-3">
                     <label htmlFor="description" className="form-label">Description</label>
-                    <input
-                        type="text" className="form-control" id="description" name="description" value={note.description} onChange={onChange}/>
+                    <textarea
+                        className="form-control" 
+                        id="description" 
+                        name="description" 
+                        rows="3"
+                        value={note.description} 
+                        onChange={onChange}
+                    />
                 </div>
                 <div className="mb-3 form-check">
                     <input type="checkbox" className="form-check-input" id="exampleCheck1" />

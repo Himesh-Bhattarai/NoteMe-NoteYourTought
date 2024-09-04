@@ -22,19 +22,19 @@ const NoteState = (props) => {
             "user": "66d43795e5f260078d84dff7",
             "title": title,
             "description": description,
-            "_id": Math.random().toString(36).substr(2, 9), // Random ID for example
+            "_id": Math.random().toString(36).substr(2, 9),
             "date": new Date().toISOString(),
             "__v": 0
         };
-        setNotes(notes.concat(newNote)); // Add new note to the existing notes
+        setNotes(notes.concat(newNote));
     };
 
-    // Function to edit a note (placeholder)
+    // Function to edit a note 
     const editNote = () => {
         console.log("Edit Note");
     };
 
-    // Function to delete a note (placeholder)
+    // Function to delete a note 
     const deleteNote = () => {
         console.log("Delete Note");
     };
