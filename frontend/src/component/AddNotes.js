@@ -9,8 +9,14 @@ const AddNotes = () => {
 
     const handleClick = (e) => {
         e.preventDefault(); 
-        addNote(note.title, note.description); 
 
+        // Basic validation to check if title or description is empty
+        if (note.title.trim() === "" || note.description.trim() === "") {
+            alert("Please fill out both the title and description fields.");
+            return;
+        }
+
+        addNote(note.title, note.description); 
         setNote({ title: "", description: "" });
     };
 
@@ -30,6 +36,7 @@ const AddNotes = () => {
                         name="title" 
                         value={note.title} 
                         onChange={onChange} 
+                        required
                     />
                 </div>
                 <div className="mb-3">
@@ -41,6 +48,7 @@ const AddNotes = () => {
                         rows="3"
                         value={note.description} 
                         onChange={onChange}
+                        required
                     />
                 </div>
                 <div className="mb-3 form-check">

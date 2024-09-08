@@ -4,14 +4,7 @@ import NoteContext from './NoteContext';
 const NoteState = (props) => {
     // Initial state for notes
     const notesInitial = [
-        {
-            "user": "66d43795e5f260078d84dff7",
-            "title": "Example Title",
-            "description": "Example Description",
-            "_id": "66d71b2d05ef899ef0f6216e",
-            "date": "2024-09-03T14:20:29.991Z",
-            "__v": 0
-        }
+
     ];
 
     const [notes, setNotes] = useState(notesInitial);
@@ -30,8 +23,8 @@ const NoteState = (props) => {
     };
 
     // Function to edit a note 
-    const editNote = () => {
-        console.log("Edit Note");
+    const editNote = (id) => {
+      
     };
 
     // Function to delete a note 
